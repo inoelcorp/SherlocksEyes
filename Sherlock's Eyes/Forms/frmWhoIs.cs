@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+﻿/*
+ * Project      : Sherlock's Eyes
+ * Description  : Form that display a ip's owner information based on the WiFi database.
+ * Author       : Inoel Arifin
+ * Date         : 2022-11-12
+ * Module       : frmWhoIs.cs
+ * 
+ * Copyright (C) 2022 Inoel Arifin. All rights reserved.
+ */
+
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Sherlock_s_Eyes
 {

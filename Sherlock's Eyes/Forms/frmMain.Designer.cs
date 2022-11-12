@@ -37,9 +37,9 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnMap = new System.Windows.Forms.Button();
             this.btnWhoIs = new System.Windows.Forms.Button();
-            this.btnWiFi = new System.Windows.Forms.Button();
             this.mnuCtxTools = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.wiFiPasswordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuButton1 = new Sherlock_s_Eyes.UserControls.MenuButton();
             this.mnuCtxTools.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,10 +97,10 @@
             this.btnRefresh.Location = new System.Drawing.Point(407, 242);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 23);
-            this.btnRefresh.TabIndex = 2;
+            this.btnRefresh.TabIndex = 5;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.button2_Click);
+            this.btnRefresh.Click += new System.EventHandler(this.Refresh_Click);
             // 
             // btnClose
             // 
@@ -108,7 +108,7 @@
             this.btnClose.Location = new System.Drawing.Point(488, 242);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 3;
+            this.btnClose.TabIndex = 6;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -120,7 +120,7 @@
             this.btnMap.Location = new System.Drawing.Point(89, 242);
             this.btnMap.Name = "btnMap";
             this.btnMap.Size = new System.Drawing.Size(75, 23);
-            this.btnMap.TabIndex = 4;
+            this.btnMap.TabIndex = 2;
             this.btnMap.Text = "Map";
             this.btnMap.UseVisualStyleBackColor = true;
             this.btnMap.Click += new System.EventHandler(this.btnMap_Click);
@@ -132,21 +132,10 @@
             this.btnWhoIs.Location = new System.Drawing.Point(170, 242);
             this.btnWhoIs.Name = "btnWhoIs";
             this.btnWhoIs.Size = new System.Drawing.Size(75, 23);
-            this.btnWhoIs.TabIndex = 5;
+            this.btnWhoIs.TabIndex = 3;
             this.btnWhoIs.Text = "Who Is?";
             this.btnWhoIs.UseVisualStyleBackColor = true;
             this.btnWhoIs.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnWiFi
-            // 
-            this.btnWiFi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnWiFi.Location = new System.Drawing.Point(251, 242);
-            this.btnWiFi.Name = "btnWiFi";
-            this.btnWiFi.Size = new System.Drawing.Size(75, 23);
-            this.btnWiFi.TabIndex = 6;
-            this.btnWiFi.Text = "Tools";
-            this.btnWiFi.UseVisualStyleBackColor = true;
-            this.btnWiFi.Click += new System.EventHandler(this.btnWiFi_Click);
             // 
             // mnuCtxTools
             // 
@@ -160,13 +149,24 @@
             this.wiFiPasswordsToolStripMenuItem.Name = "wiFiPasswordsToolStripMenuItem";
             this.wiFiPasswordsToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.wiFiPasswordsToolStripMenuItem.Text = "WiFi Passwords...";
+            this.wiFiPasswordsToolStripMenuItem.Click += new System.EventHandler(this.wiFiPasswordsToolStripMenuItem_Click);
+            // 
+            // menuButton1
+            // 
+            this.menuButton1.Location = new System.Drawing.Point(251, 242);
+            this.menuButton1.Menu = this.mnuCtxTools;
+            this.menuButton1.Name = "menuButton1";
+            this.menuButton1.Size = new System.Drawing.Size(75, 23);
+            this.menuButton1.TabIndex = 4;
+            this.menuButton1.Text = "Tools";
+            this.menuButton1.UseVisualStyleBackColor = true;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(575, 278);
-            this.Controls.Add(this.btnWiFi);
+            this.Controls.Add(this.menuButton1);
             this.Controls.Add(this.btnWhoIs);
             this.Controls.Add(this.btnMap);
             this.Controls.Add(this.btnClose);
@@ -193,7 +193,7 @@
     private ColumnHeader colDetail;
     private Button btnMap;
     private Button btnWhoIs;
-    private Button btnWiFi;
     private ContextMenuStrip mnuCtxTools;
     private ToolStripMenuItem wiFiPasswordsToolStripMenuItem;
+    private Sherlock_s_Eyes.UserControls.MenuButton menuButton1;
 }

@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿/*
+ * Project      : Sherlock's Eyes
+ * Description  : Form that shows Google map and positioned the specified location.
+ * Author       : Inoel Arifin
+ * Date         : 2022-11-12
+ * Module       : frmMap.cs
+ * 
+ * Copyright (C) 2022 Inoel Arifin. All rights reserved.
+ */
 
 namespace Sherlock_s_Eyes
 {

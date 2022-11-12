@@ -1,86 +1,86 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.Diagnostics;
-//using System.Globalization;
-//using System.IO;
-//using System.Linq;
-//using System.Reflection;
-//using System.Runtime.CompilerServices;
-//using System.Security;
-//using System.Text;
-//using System.Threading.Tasks;
-//using Microsoft.VisualBasic;
-//using System.ComponentModel;
-//using Newtonsoft.Json.Linq;
+﻿/*
+ * Project      : Sherlock's Eyes
+ * Description  : Popup Menu Button User control.
+ * Author       : Inoel Arifin
+ * Date         : 2022-11-12
+ * Module       : MenuButton.cs
+ * 
+ * Copyright (C) 2022 Inoel Arifin. All rights reserved.
+ */
 
-//public class MenuButton : Button
-//{
+using System.ComponentModel;
 
-//    // <DefaultValue(Nothing)>
-//    public ContextMenuStrip Menu
-//    {
-//        get
-//        {
-//            return m_Menu;
-//        }
-//        set
-//        {
-//            m_Menu = value;
-//        }
-//    }
-//    private ContextMenuStrip m_Menu = null/* TODO Change to default(_) if this is not a reference type */;
+namespace Sherlock_s_Eyes.UserControls
+{
+    public class MenuButton : Button
+{
 
-//    [DefaultValue(false)]
-//    public bool ShowMenuUnderCursor
-//    {
-//        get
-//        {
-//            return m_ShowMenuUnderCursor;
-//        }
-//        set
-//        {
-//            m_ShowMenuUnderCursor = value;
-//        }
-//    }
-//    private bool m_ShowMenuUnderCursor;
+    // <DefaultValue(Nothing)>
+    public ContextMenuStrip Menu
+    {
+        get
+        {
+            return m_Menu;
+        }
+        set
+        {
+            m_Menu = value;
+        }
+    }
+    private ContextMenuStrip m_Menu = null;
 
-//    protected override void OnMouseDown(MouseEventArgs mevent)
-//    {
-//        base.OnMouseDown(mevent);
+    [DefaultValue(false)]
+    public bool ShowMenuUnderCursor
+    {
+        get
+        {
+            return m_ShowMenuUnderCursor;
+        }
+        set
+        {
+            m_ShowMenuUnderCursor = value;
+        }
+    }
+    private bool m_ShowMenuUnderCursor;
 
-//        if (Menu != null && mevent.Button == MouseButtons.Left)
-//        {
-//            Point menuLocation;
+    protected override void OnMouseDown(MouseEventArgs mevent)
+    {
+        base.OnMouseDown(mevent);
 
-//            if (ShowMenuUnderCursor)
-//                menuLocation = mevent.Location;
-//            else
-//                menuLocation = new Point(0, Height);
+        if (Menu != null && mevent.Button == MouseButtons.Left)
+        {
+            Point menuLocation;
 
-//            Menu.Show(this, menuLocation);
-//        }
-//    }
+            if (ShowMenuUnderCursor)
+                menuLocation = mevent.Location;
+            else
+                menuLocation = new Point(0, Height);
 
-//    protected override void OnKeyPress(KeyPressEventArgs mevent)
-//    {
-//        base.OnKeyPress(mevent);
+            Menu.Show(this, menuLocation);
+        }
+    }
 
-//        if (Menu != null && mevent.KeyChar == (char)Keys.Space)
-//            Menu?.Show(this, new Point(0, Height));
-//    }
+    protected override void OnKeyPress(KeyPressEventArgs mevent)
+    {
+        base.OnKeyPress(mevent);
 
-//    protected override void OnPaint(PaintEventArgs pevent)
-//    {
-//        base.OnPaint(pevent);
+        if (Menu != null && mevent.KeyChar == (char)Keys.Space)
+            Menu?.Show(this, new Point(0, Height));
+    }
 
-//        if (Menu != null)
-//        {
-//            int arrowX = ClientRectangle.Width - 14;
-//            int arrowY = (int)(ClientRectangle.Height / (double)2 - 1);
+    protected override void OnPaint(PaintEventArgs pevent)
+    {
+        base.OnPaint(pevent);
 
-//            Brush brush = Enabled ? SystemBrushes.ControlText : SystemBrushes.ButtonShadow;
-//            Point[] arrows = new Point[] { new Point(arrowX, arrowY), new Point(arrowX + 7, arrowY), new Point(arrowX + 3, arrowY + 4) };
-//            pevent.Graphics.FillPolygon(brush, arrows);
-//        }
-//    }
-//}
+        if (Menu != null)
+        {
+            int arrowX = ClientRectangle.Width - 14;
+            int arrowY = (int)(ClientRectangle.Height / (double)2 - 1);
+
+            Brush brush = Enabled ? SystemBrushes.ControlText : SystemBrushes.ButtonShadow;
+            Point[] arrows = new Point[] { new Point(arrowX, arrowY), new Point(arrowX + 7, arrowY), new Point(arrowX + 3, arrowY + 4) };
+            pevent.Graphics.FillPolygon(brush, arrows);
+        }
+    }
+}
+}

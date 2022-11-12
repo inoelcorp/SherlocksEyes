@@ -18,13 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="frmMap.cs">
+    <Compile Update="Forms\frmMap.cs">
       <SubType>Form</SubType>
     </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Forms\" />
   </ItemGroup>
 
 </Project>

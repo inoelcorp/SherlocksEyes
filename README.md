@@ -9,4 +9,7 @@ computer and displays the decrypted password.
 ![Map](https://user-images.githubusercontent.com/3995738/224535826-331a99cc-72c6-4a9c-b52a-4913271f1a69.png)
 
 ## Requirement:
-Opencage account for the geolocation feature.
+Opencage account for the geolocation feature. Create an account on www.opencagedata.com and put the api key in the NetworkHelper.cs file:
+
+![image](https://user-images.githubusercontent.com/3995738/224537604-7f9851e5-db0b-454e-bd38-b1535a12ce2c.png)
+

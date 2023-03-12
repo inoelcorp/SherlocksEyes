@@ -20,7 +20,7 @@ namespace Sherlock_s_Eyes.Classes
     internal static class NetworkHelper
     {
         private static readonly HttpClient _client = new HttpClient();
-        private static readonly string _opencageApiKey = "";
+        private static readonly string _opencageApiKey = "{your opencage api}";
 
         /// <summary>
         /// This method gets all the ip address connected to the local machines and its geolocation
